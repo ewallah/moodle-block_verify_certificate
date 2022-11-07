@@ -34,9 +34,10 @@
  * Verify certificate block class
  *
  * @copyright 2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
+ * @author    Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com> | 2015
+ * @package   block_verify_certificate
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 class block_verify_certificate extends block_base {
     /**
      * Sets the block title

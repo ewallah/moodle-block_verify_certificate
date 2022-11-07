@@ -32,12 +32,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version  = 2018100400;
-$plugin->requires = 2010112400;
-$plugin->cron = 0;
 $plugin->component = 'block_verify_certificate';
+$plugin->version = 2022110700;
+$plugin->requires = 2022041900;
+$plugin->release = 'v4.0.1';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'Version 3.51.1';
-$plugin->dependencies = array(
-    'mod_certificate' => ANY_VERSION
-);
+$plugin->dependencies = ['mod_certificate' => ANY_VERSION];
