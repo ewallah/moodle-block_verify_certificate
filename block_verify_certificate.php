@@ -54,7 +54,7 @@ class block_verify_certificate extends block_base {
      * @return array
      */
     public function applicable_formats() {
-        return array('all' => true);
+        return ['all' => true];
     }
 
     /**

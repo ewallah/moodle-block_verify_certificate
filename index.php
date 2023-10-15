@@ -39,7 +39,7 @@ $id = required_param('certnumber', PARAM_ALPHANUM);   // Certificate code to ver
 
 $PAGE->set_pagelayout('standard');
 $strverify = get_string('verifycertificate', 'block_verify_certificate');
-$PAGE->set_url('/blocks/verify_certificate/index.php', array('certnumber' => $id));
+$PAGE->set_url('/blocks/verify_certificate/index.php', ['certnumber' => $id]);
 $context = context_system::instance();
 $PAGE->set_context($context);
 
@@ -62,7 +62,7 @@ $sql = "SELECT ci.code, ci.timecreated AS citimecreated,
     INNER JOIN {certificate} c
             ON c.id = ci.certificateid
          WHERE ci.code = ?";
-$certificates = $DB->get_records_sql($sql, array($id));
+$certificates = $DB->get_records_sql($sql, [$id]);
 
 if (! $certificates) {
     echo $OUTPUT->box_start('generalbox boxaligncenter');
@@ -86,12 +86,12 @@ if (! $certificates) {
         . ' "' . $certdata->code . '" ' . '</font></b></p>';
         echo '<table width ="100%" cellpadding="5px"><tr><td>';
         echo '<div class="userprofilebox clearfix"><div class="profilepicture">';
-        echo $OUTPUT->user_picture($certdata, array('size' => 150));
+        echo $OUTPUT->user_picture($certdata, ['size' => 150]);
         echo '</div>';
         echo '</td><td>';
         echo '<p><b>' . get_string('to', 'block_verify_certificate') . ': </b>' . fullname($certdata) . '<br />';
 
-        $course = $DB->get_record('course', array('id' => $certdata->course));
+        $course = $DB->get_record('course', ['id' => $certdata->course]);
         if ($course) {
             echo '<p><b>' . get_string('course', 'block_verify_certificate') . ': </b>' . $course->fullname . '<br />';
         }
