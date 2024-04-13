@@ -33,7 +33,7 @@
 require_once("../../config.php");
 require_login();
 require_once($CFG->dirroot . '/mod/certificate/lib.php');
-require_once($CFG->dirroot.'/mod/certificate/locallib.php');
+require_once($CFG->dirroot . '/mod/certificate/locallib.php');
 
 $id = required_param('certnumber', PARAM_ALPHANUM);   // Certificate code to verify.
 
@@ -70,13 +70,14 @@ if (! $certificates) {
     echo '<p class="notVerified">' . get_string('certificate', 'block_verify_certificate')
          . ' "' . $id . '" ' . '</p>';
     echo '<div class="wrapper-box"><br>';
-    echo '<div class="left"><br>' .get_string('notfound', 'block_verify_certificate').'</div>';
+    echo '<div class="left"><br>' . get_string('notfound', 'block_verify_certificate') . '</div>';
     echo '<div class="right"><img src="pix/certnotverified.png" border="0" align="center"></div>';
     echo '</div></div>';
     echo $OUTPUT->box_end();
 } else {
     echo $OUTPUT->box_start('generalbox boxaligncenter');
-    echo "<a title=\""; print_string('printerfriendly', 'certificate');
+    echo "<a title=\"";
+    print_string('printerfriendly', 'certificate');
     echo "\" href=\"#\" onclick=\"window.print ()\"><div class=\"printicon\">";
     echo "<img src=\"pix/printicon.png\" height=\"40\" width=\"40\" border=\"0\" align=\"right\"></img></a></div>";
 

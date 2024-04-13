@@ -38,7 +38,6 @@ use stdClass;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_test extends \advanced_testcase {
-
     /**
      * Test block.
      * @covers \block_verify_certificate
@@ -61,5 +60,4 @@ class block_test extends \advanced_testcase {
         $content = $block->get_content();
         $this->assertStringContainsString('Enter certificate code to verify', $content->text);
     }
-
 }

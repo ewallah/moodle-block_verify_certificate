@@ -33,9 +33,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_verify_certificate';
-$plugin->requires = 2022112800;
-$plugin->supported = [401, 403];
+$plugin->requires = 2023042400;
+$plugin->supported = [402, 404];
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v4.0.2';
-$plugin->version = 2023102800;
+$plugin->release = 'v4.2.1';
+$plugin->version = 2024041300;
 $plugin->dependencies = ['mod_certificate' => ANY_VERSION];

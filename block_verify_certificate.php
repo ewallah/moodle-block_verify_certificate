@@ -68,12 +68,12 @@ class block_verify_certificate extends block_base {
             return $this->content;
         }
 
-        $this->content = new \stdClass;
-        $this->content->text = '<p>'.get_string('entercode', 'block_verify_certificate').'</p>';
+        $this->content = new \stdClass();
+        $this->content->text = '<p>' . get_string('entercode', 'block_verify_certificate') . '</p>';
         $url = new \moodle_url('/blocks/verify_certificate/index.php');
-        $this->content->text .= '<form name="cert" method="post" action="'. $url . '">';
+        $this->content->text .= '<form name="cert" method="post" action="' . $url . '">';
         $this->content->text .= '<input type="text" id="certcode" name="certnumber" size="20" value="" />';
-        $this->content->text .= '<input type="submit" value="'.get_string('validate', 'block_verify_certificate').'"/></form>';
+        $this->content->text .= '<input type="submit" value="' . get_string('validate', 'block_verify_certificate') . '"/></form>';
         $this->content->footer = '';
 
         return $this->content;
@@ -87,5 +87,4 @@ class block_verify_certificate extends block_base {
     public function instance_allow_config() {
         return false;
     }
-
 }
