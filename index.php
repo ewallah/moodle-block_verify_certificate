@@ -51,7 +51,8 @@ $PAGE->requires->css('/blocks/verify_certificate/printstyle.css');
 $PAGE->requires->css('/blocks/verify_certificate/styles.css');
 echo $OUTPUT->header();
 
-$ufields = user_picture::fields('u');
+$userfieldsapi = \core_user\fields::for_userpic();
+$ufields = $userfieldsapi->get_sql('u', false, '', '', false)->selects;
 
 $sql = "SELECT ci.code, ci.timecreated AS citimecreated,
                ci.certificateid, ci.userid,

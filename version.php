@@ -37,5 +37,5 @@ $plugin->requires = 2023042400;
 $plugin->supported = [402, 404];
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = 'v4.2.1';
-$plugin->version = 2024041300;
+$plugin->version = 2024100500;
 $plugin->dependencies = ['mod_certificate' => ANY_VERSION];
