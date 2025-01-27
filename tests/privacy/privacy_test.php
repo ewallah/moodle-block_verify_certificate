@@ -40,7 +40,7 @@ use core_privacy\tests\provider_testcase;
 class privacy_test extends provider_testcase {
     /**
      * Test privacy.
-     * @covers \block_verify_certificate\privacy\provider
+     * #[CoversClass(block_verify_certificate\privacy\provider)]
      */
     public function test_privacy() {
         $privacy = new provider();

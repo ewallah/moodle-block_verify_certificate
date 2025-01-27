@@ -40,7 +40,7 @@ use stdClass;
 class block_test extends \advanced_testcase {
     /**
      * Test block.
-     * @covers \block_verify_certificate
+     * #[CoversClass(block_verify_certificate)]
      */
     public function test_block() {
         global $CFG;
