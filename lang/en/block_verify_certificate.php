@@ -30,18 +30,18 @@
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['title'] = 'Verify certificate';
-$string['pluginname'] = 'Verify certificate';
 $string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
-$string['verifycertificate'] = 'Verify Certificate';
-$string['verify_certificate:addinstance'] = 'Add a new Verify certificate block';
-$string['verify_certificate:myaddinstance'] = 'Add a new Verify certificate block';
-$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as it is case sensetive.';
-$string['to'] = 'AWARDED TO';
+$string['check'] = 'Please make sure all the details on the certificate match the displayed results.';
 $string['course'] = 'COURSE';
 $string['date'] = 'ON';
-$string['grade'] = 'GRADE';
-$string['check'] = 'Please make sure all the details on the certificate match the displayed results.';
 $string['entercode'] = 'Enter certificate code to verify:';
-$string['validate'] = 'Verify';
+$string['grade'] = 'GRADE';
+$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as it is case sensetive.';
+$string['pluginname'] = 'Verify certificate';
 $string['privacy:metadata'] = 'The verify certificate does not store private data.';
+$string['title'] = 'Verify certificate';
+$string['to'] = 'AWARDED TO';
+$string['validate'] = 'Verify';
+$string['verify_certificate:addinstance'] = 'Add a new Verify certificate block';
+$string['verify_certificate:myaddinstance'] = 'Add a new Verify certificate block';
+$string['verifycertificate'] = 'Verify Certificate';

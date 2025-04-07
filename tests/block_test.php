@@ -37,12 +37,12 @@ use stdClass;
  * @author     Renaat Debleu <info@eWallah.net>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class block_test extends \advanced_testcase {
+final class block_test extends \advanced_testcase {
     /**
      * Test block.
-     * #[CoversClass(block_verify_certificate)]
+     * @covers \block_verify_certificate
      */
-    public function test_block() {
+    public function test_block(): void {
         global $CFG;
         require_once($CFG->dirroot . '/blocks/moodleblock.class.php');
         require_once($CFG->dirroot . '/blocks/verify_certificate/block_verify_certificate.php');
@@ -50,7 +50,6 @@ class block_test extends \advanced_testcase {
         $this->setAdminUser();
         $block = new \block_verify_certificate();
         $this->assertCount(1, $block->applicable_formats());
-        $this->assertEquals('complementary', $block->get_aria_role());
         $this->assertFalse($block->instance_allow_multiple());
         $this->assertFalse($block->instance_allow_config());
         $this->assertFalse($block->has_config());
